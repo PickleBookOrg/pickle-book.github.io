@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>    
+<body>
+    <div class="bg-pickle-green text-center text-white px-4 py-2">
+        <p class="text-[0.88rem] leading-5">PICkle Book is launching summer of 2025!</p>
+    </div>
+
+    <header class="bg-white sticky top-0 z-99 border-b-1 lg:border-0 border-b-slate-300">
+        <div class="max-w-[1440px] mx-auto px-6 py-4 flex flex-wrap items-center">
+            <div class="flex items-center justify-between shrink-0 grow lg:grow-0 w-full lg:w-auto lg:me-6 xl:me-10">
+                <a href="/"><img src="img/logo.png" alt="logo"></a>
+
+                <button id="menu-button" class="lg:hidden">
+                    <svg id="menu-button-open" xmlns="http://www.w3.org/2000/svg" class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu"><path d="M4 12h16"/><path d="M4 18h16"/><path d="M4 6h16"/></svg>
+                    <svg id="menu-button-close" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="display:none">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="nav" class="hidden lg:flex flex-col lg:flex-row items-center grow">
+                <nav class="flex flex-col lg:flex-row lg:items-center lg:gap-6 xl:gap-10 lg:me-auto w-full lg:w-auto border-b-1 lg:border-0 border-b-slate-300 my-4 lg:my-0">
+                    <a href="/#how-it-works" class="font-medium py-2 lg:py-0 border-t-1 lg:border-0 border-t-slate-300">How it works</a>
+                    <a href="/#subscription" class="font-medium py-2 lg:py-0 border-t-1 lg:border-0 border-t-slate-300">Subscription</a>
+                    <a href="/#faq" class="font-medium py-2 lg:py-0 border-t-1 lg:border-0 border-t-slate-300">FAQ</a>
+                </nav>
+
+                <nav class="flex items-center space-x-3">
+                    <a href="https://www.tiktok.com/@picklebookllc" target="_blank" title="tiktok">
+                        <span class="inline-flex items-center justify-center size-8 rounded-full bg-pickle-green">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-white" viewBox="0 0 16 16">
+                                <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="https://www.instagram.com/picklebookllc/" target="_blank" title="instagram">
+                        <span class="inline-flex items-center justify-center size-8 rounded-full bg-pickle-green">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-white" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="mailto:support@pickle-book.com" class="inline-flex items-center space-x-2 font-medium bg-cream-green text-pickle-green border-1 border-pickle-green rounded-full ps-6 pe-1 py-1">
+                        <span>Get in touch</span>
+                        <span class="inline-flex items-center justify-center size-8 rounded-full bg-pickle-green">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-white" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+                                <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+                            </svg>
+                        </span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="max-w-[1020px] mx-auto px-6 py-12 space-y-4 text-sm text-justify">
+            <p class="italic">Updated May 1, 2025</p>
+            
+            <p>At PICkle Book Inc., (“PICkle Book,” “we,” or “us”) we recognize the sensitivity of the personal information that you share with our service, and we are firmly committed to protecting your privacy. This Privacy Policy describes the type of information we may collect from you when you visit PICkle-Book.com and the PICkle Book app or use any products or services that include an authorized link to this Privacy Policy (collectively, the “Services”), how we use the information we collect, with whom we share it, how we protect it, and the choices we offer you regarding our collection and use of such information.</p>
+            
+            <h3 class="font-semibold">Privacy Principles</h3>
+
+            <p>We adhere to the following principles in order to protect your privacy:</p>
+
+            <p>We do not collect any more personal information about you than is necessary; We only use your personal information for the purposes we specify in this privacy policy, unless you agree otherwise; We do not keep your personal information if it is no longer needed; and Other than as we specify in this privacy policy, we do not share your personal information with third parties</p>
+
+            <h3 class="font-semibold">How We Collect and Use Personal Information</h3>
+
+            <p>We may collect personal information about you in various manners, including: (1) directly from you when you use the Services, such as when you register for an account, access certain features or content, or order products; (2) through social networks on which you may access the Services or otherwise interact with us; (3) through our service providers, business parties, and other third parties; and (4) automatically when you use the Services.</p>
+
+            <h3 class="font-semibold">Information We Collect</h3>
+
+            <p>The personal information we collect about you may include, without limitation:</p>
+
+            <p>Contact information, such as name, email address, and phone number; Demographic information; Login information, such as username and password; Payment and financial details, such as payment card number, expiration date, authentication code, and billing address.</p>
+
+            <p>Social Media Accounts. If you choose to log into the Services using a social media account you may be asked to grant us access to certain information from your social media profile, such as your full name, photographs, and email address. Social media networks operate independently from PICkle Book, and we are not responsible for social media networks’ interfaces or privacy or security practices. Please refer to the privacy settings of the applicable social media platform or application to determine how you may manage the interactivity between PICkle Book and your social media account.</p>
+
+            <p>Information We Collect Automatically</p>
+
+            <p>In addition to the personal information you may provide to us as described above, we automatically collect certain device and statistical information to allow the Services to work better for you. This information helps us evaluate how users and members use the Service, including by conducting data analysis and internal research to understand how our website is used, auditing the Services, developing new products and services, improving the Services, identifying usage trends and determining the effectiveness of promotional campaigns.</p>
+
+            <p>The technologies we use to gather this information include:</p>
+
+            <p>IP Addresses: IP addresses define the Internet location of your device and help us better understand the geographic distribution of our members and manage the performance of our website. We use your IP address to help diagnose problems with our server, and to administer our website.
+            Web logs: We examine Web logs to learn how you use our website, these show the paths people take through our website and how long they spend in certain areas. We also use Web logs to detect the type of Web browser you are using so that we can optimize the performance of our website and understand the mix of browsers used by our members.
+            Cookies and Third-Party Analytics: Cookies are tiny files that are placed onto the hard drive of your computer when you visit our website. They let us immediately recognize you when you return to the site. This enables us, among other things, to personalize your experience with our site. You can learn more about cookies by visiting allaboutcookies.com and you can modify your cookies settings by following the instructions provided by your browser. If you set your browser to disable cookies you may not be able to fully access and use our Sites. We may also use third-party analytics tools such as Google Analytics, Google AdWords, and Facebook. Google Analytics and Google AdWords are web analytics and marketing tools that allows us to understand how you engage with the Services. You may choose to opt out of Google Analytics and still have full access to the Services. Further information about Google Analytics can be found here. You can learn more about the choices provided by advertisers for individuals to decide how their information is collected and used by visiting the Digital Advertising Alliance (aboutads.info), the Network Advertising Initiative (networkadvertising.org/managing/opt_out.asp) or the European Digital Advertising Alliance (youronlinechoices.eu).</p>
+
+            <p>How We Respond To Do Not Track Signals</p>
+
+            <p>Your web browser may let you choose your preference as to whether you want to allow the collection of information about your online activities over time and across different websites or online services. At this time, the Services do not respond to the preferences you may have set in your web browser regarding such collection of your information, and the Services may continue to collect information in the manner described in this Privacy Policy.</p>
+
+            <p>How We Use the Information We Collect</p>
+
+            <p>We may use information we obtain about you to:</p>
+
+            <p>Process orders you place and complete other transactions you have requested using the Services, and provide you with products and services you request; Inform you of new features or other offers of interest from us or our affiliates; Allow you to invite others to join the Services; Send you information or materials you request; Maintain a record of your purchases and other transactions using the Services; Respond to your questions and comments and provide customer support; Communicate with you about our products, Services, offers, and promotions; Operate, evaluate, and improve our business and the products and Services we offer; Analyze and enhance our marketing communications and strategies; Analyze trends and statistics regarding use of the Services and transactions conducted using the Services; Protect against and prevent fraud, unauthorized transactions, claims, and other liabilities, and manage risk exposure, including by identifying potential hackers and other unauthorized users; Enforce our Terms of Use and other agreements; and Comply with applicable legal requirements and industry standards.</p>
+
+            <p>We also may use the information we obtain about you in other ways for which we provide specific notice at the time of collection.</p>
+
+            <p>Disclosure of your personal information</p>
+
+            <p>We may disclose aggregated or other non-personal information about our users without restriction. We may disclose personal information about you in the following ways and to the following third parties:</p>
+
+            <p>Affiliates. To our parents, affiliates, and partners, for their use in a manner consistent with the purpose described in this Privacy Policy.
+            Agents and Service Providers. To contractors, service providers, and other third parties we use to support our business, provide the Services, and who complete transactions or perform services on our behalf or for your benefit. These third parties are only given the personal information they need to perform the services we authorize, and they can only use it for those authorized purposes. We have agreements with them to ensure that personal information that they process is properly protected.
+            Marketing. With your consent, to third parties for their own direct marketing purposes, to provide you with information about products that may be of interest to you, and for other purposes as specifically set forth in this Privacy Policy.
+            Legal Process. As required by law, such as to comply with a subpoena or other legal process, or when we believe in good faith that disclosure is necessary to protect our rights, protect your safety or the safety of others, investigate fraud, or respond to a government request.
+            Certain Business Transfers. As part of a corporate business transaction, such as a merger, acquisition, joint venture, or financing or sale of company assets. It may also be disclosed in the event of insolvency, bankruptcy, or receivership. We will use reasonable efforts to direct any such transferee to use your personal information in a manner that is consistent with our privacy policy.
+            Consent. In additional ways with your consent.</p>
+
+            <p>We also reserve the right to transfer your personal information to a buyer or other transferee in the event of a merger, divestiture, restructuring, reorganization, dissolution, sale, or other transfer of some or all of our assets. Should such a sale, merger, or transfer occur, we will use reasonable efforts to direct the transferee to use your personal information in a manner that is consistent with our Privacy Policy.</p>
+
+            <h3 class="font-semibold">Data Security</h3>
+
+            <p>The security of your personal information is important to us. We have adopted generally accepted industry standards in connection with our data collection, storage, and processing practices and security measures to protect against unauthorized access, alteration, disclosure, or destruction of your personal information, username, password, transaction information, and data stored on our Services. However, no method of transmission over the Internet, or method of electronic storage, is 100% secure. Therefore, while we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security. We will retain your information for as long as needed to fulfill your requests, provide you services, comply with our legal obligations, resolve disputes, and enforce our agreements. Any transmission of personal information is at your own risk. For any questions regarding our security practices, to report issues, or to inquire about bug bounties, please email support@PICkle-Book.com.</p>
+
+            <h3 class="font-semibold">Payments</h3>
+
+            <p>When you subscribe to any of the paid portions of the Services or when you make a purchase from our online store, we will collect the personal and financial information from you as stated above. We will not share this financial information with anyone outside of our company, other than the financial institutions involved in processing your payment or any third-party service providers we ask to process this information on our behalf, in order to fulfill our contractual obligations to you. We will comply in all respects with applicable consumer credit laws.</p>
+
+            <p>Please note, if you click away from the Services to visit the site of any third-party advertiser or sponsor, you may be asked for your payment card or other personal information in order to purchase or use products and services offered. These companies have their own privacy and data collection practices. We have no responsibility or liability for these independent policies. You should therefore review their privacy notices carefully if you have concerns about how your personal information may be used.</p>
+
+            <p class="font-semibold">Your Rights</p>
+
+            <p>Certain data privacy and protection laws, such as the CCPA and GDPR (as defined below), may afford you additional rights to your personal information. If you wish to exercise such rights, you may contact us at any time to make the following requests:</p>
+
+            <p>Request a Copy of your Personal Information. You have the right to request a copy of the categories of personal information we hold about you, the categories for the sources of personal information we hold about you, our business purpose for collecting that personal information, with whom we share it with, and what personal information that we hold about you. If you would like a copy of your personal information, please contact us at support@PICkle-Book.com. We may request proof of your identity before sharing such information. If you discover that the information we hold about you is incorrect or out of date, you may ask us to correct that information by contacting us using the contact information below.
+            Cease Processing or Delete Personal Information. You may ask us to stop processing, or to delete, the personal information we hold about you. It may not be possible for us to cease processing or to delete all of the information we hold about you in certain instances, including where we are fulfilling a transaction, have a legal basis to retain the information, detect illegal or fraudulent activity, or need it to engage solely internal uses that are reasonably aligned with consumer expectations based on your relationship with us. However, please contact us to discuss how we can assist you with your request.
+            Withdraw Consent. When we process your information on the basis that you have consented to such processing, you have the right to withdraw your consent or ask us to stop or restrict processing the personal information we have about you, at any time by contacting us using the contact information below.
+            Portability. You may also ask us to transfer your personal information to you or a third party in certain circumstances. If you would like any further information about your rights or how to exercise them, please contact us using the contact information below.
+            Complaints. If you are in the European Union, you have the right to make a complaint at any time to the relevant data protection authority in your country. Unsubscribe. If you receive marketing emails from us, you can unsubscribe to our emails by clicking “unsubscribe” within each email. You may not opt-out of service-related communications, which are not promotional in nature. To exercise the above rights, please submit a verifiable consumer request to us by: Emailing us at support@PICkle-Book.com. Children Under the Age of 13</p>
+
+            <p>The Services are not directed to, and we do not knowingly collect or solicit personal information from, children under the age of 13. If we learn we have collected or received personal information from a child under the age of 13, we will delete that information. If you believe we might have any information from or about a child under the age of 13, please contact us.</p>
+
+            <p class="font-semibold">Where We Store Your Personal Information</p>
+
+            <p>PICkle Book is located, and its Services are hosted, in the United States of America. When we obtain information about you, we may transfer, process, and store such information outside of the country in which you reside, including in the United States. By using the Services, you consent to the transfer to and processing and storage of your information in countries outside of your country of residence, which may have different data protection laws than those in the country where you reside.</p>
+
+            <h3 class="font-semibold">California Consumer Privacy Act (CCPA) Rights</h3>
+
+            <p>This Section for California Residents supplements the information contained in this Privacy Policy. This Section applies to California residents from whom we collect personal information from who reside in the State of California. We adopt this privacy notice to comply with the California Consumer Privacy Act of 2018 (“CCPA”) and any terms defined in the CCPA have the same meaning when used in this Section.</p>
+
+            <p class="font-semibold">Information We Collect</p>
+
+            <p>We may collect information that identifies, relates to, describes, references, is reasonably capable of being associates with, or could reasonably be linked, directly or indirectly, with a particular consumer or household (“personal information”). In particular, within the last 12 months, we have collected the following personal information from the sources and for the business or commercial purposes described below. Note that personal information does not include:</p>
+
+            <p>Publicly available information from government records. Deidentified or aggregated consumer information. Information excluded from the CCPA’s scope, such as health or medical information covered by the Health Insurance Portability and Accountability Act of 1996 (HIPAA) and the California Confidentiality of Medical Information Act (CMIA) and personal information covered by certain sector-specific privacy laws, including the Fair Credit Reporting Act (FRCA), the Gramm-Leach-Bliley Act (GLBA), California Financial Information Privacy Act (FIPA), and the Driver’s Privacy Protection Act of 1994.</p>
+        </section>
+    </main>
+
+    <footer class="max-w-[1440px] mx-auto p-6 text-[0.88rem] leading-5">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 border-b pb-4">
+            <div class="flex items-center">
+                <span class="me-8">Follow us</span>
+                <div class="flex items-center space-x-3">
+                    <a href="https://www.tiktok.com/@picklebookllc" target="_blank" title="tiktok">
+                        <span class="inline-flex items-center justify-center size-8 rounded-full bg-pickle-green">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-white" viewBox="0 0 16 16">
+                                <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="https://www.instagram.com/picklebookllc/" target="_blank" title="instagram">
+                        <span class="inline-flex items-center justify-center size-8 rounded-full bg-pickle-green">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-4 fill-white" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <nav class="flex space-x-4">
+                <a href="/terms-of-service.html" class="font-semibold hover:underline">Terms of Service</a>
+                <a href="/privacy-policy.html" class="font-semibold hover:underline">Privacy Policy</a>
+            </nav>
+        </div>
+        <div class="text-center p-4 text-sm text-muted-foreground">
+            &copy; PICkle Book 2025. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        const menu = document.getElementById('menu-button');
+        const openIcon = document.getElementById('menu-button-open');
+        const closeIcon = document.getElementById('menu-button-close');
+        const nav = document.getElementById('nav');
+
+        menu.addEventListener('click', () => {
+            nav.classList.toggle('hidden');
+
+            if (nav.classList.contains('hidden')) {
+                openIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            } else {
+                openIcon.style.display = 'none';
+                closeIcon.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

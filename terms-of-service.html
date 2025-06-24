@@ -20,7 +20,7 @@
         <p class="text-[0.88rem] leading-5">PICkle Book is launching summer of 2025!</p>
     </div>
 
-    <header class="bg-white sticky top-0 z-99 border-b-1 lg:border-0 border-b-slate-300">
+    <header class="sticky-header sticky top-0 z-99 border-b-1 lg:border-0 border-b-slate-300">
         <div class="max-w-[1440px] mx-auto px-6 py-4 flex flex-wrap items-center">
             <div class="flex items-center justify-between shrink-0 grow lg:grow-0 w-full lg:w-auto lg:me-6 xl:me-10">
                 <a href="/"><img src="img/logo.png" alt="logo"></a>
@@ -321,6 +321,19 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('.sticky-header');
+            const originalOffsetY = header.offsetTop;
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > originalOffsetY) {
+                    header.classList.add('bg-white');
+                } else {
+                    header.classList.remove('bg-white');
+                }
+            });
+        });
+    </script>
     <script>
         const menu = document.getElementById('menu-button');
         const openIcon = document.getElementById('menu-button-open');

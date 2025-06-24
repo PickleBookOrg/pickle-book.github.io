@@ -4,6 +4,7 @@ html {
 }
 
 body {
+    background: linear-gradient(to bottom, #f6ffe8 0%, #ffffff 20%);
     color: #252525;
     font-family: "Figtree", sans-serif;
     font-optical-sizing: auto;
